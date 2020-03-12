@@ -1,0 +1,7 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [true, "attribute", "ngrxEnergyDrinks", "camelCase"],
+    "component-selector": [true, "element", "ngrx-energy-drinks", "kebab-case"]
+  }
+}
