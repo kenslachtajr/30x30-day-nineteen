@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WildComponent } from './wild.component';
+import { WildcardComponent } from './wildcard.component';
 
-describe('WildComponent', () => {
-  let component: WildComponent;
-  let fixture: ComponentFixture<WildComponent>;
+describe('WildcardComponent', () => {
+  let component: WildcardComponent;
+  let fixture: ComponentFixture<WildcardComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WildComponent ]
+      declarations: [ WildcardComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WildComponent);
+    fixture = TestBed.createComponent(WildcardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

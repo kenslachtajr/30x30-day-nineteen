@@ -1,14 +1,14 @@
 import { async, TestBed } from '@angular/core/testing';
-import { UiLoginModule } from './ui-login.module';
+import { UiLibrariesModule } from './ui-libraries.module';
 
-describe('UiLoginModule', () => {
+describe('UiLibrariesModule', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [UiLoginModule]
+      imports: [UiLibrariesModule]
     }).compileComponents();
   }));
 
   it('should create', () => {
-    expect(UiLoginModule).toBeDefined();
+    expect(UiLibrariesModule).toBeDefined();
   });
 });

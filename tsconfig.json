@@ -19,7 +19,8 @@
       "@ngrx-energy-drinks/core-data": ["libs/core-data/src/index.ts"],
       "@ngrx-energy-drinks/core-state": ["libs/core-state/src/index.ts"],
       "@ngrx-energy-drinks/material": ["libs/material/src/index.ts"],
-      "@ngrx-energy-drinks/ui-login": ["libs/ui-login/src/index.ts"]
+      "@ngrx-energy-drinks/ui-login": ["libs/ui-login/src/index.ts"],
+      "@ngrx-energy-drinks/ui-libraries": ["libs/ui-libraries/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
