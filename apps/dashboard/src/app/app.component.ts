@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '@ngrx-energy-drinks/core-data';
 
 @Component({
   selector: 'ngrx-energy-drinks-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'dashboard';
+  title = 'Energy Drinks MDV';
+
+  links = [
+    { path: '/energy-drinks', icon: 'work', title: 'Energy Drinks'}
+  ]
+
+  userIsAuthenticated$ = this.authService.isAuthenticated$;
+  constructor(private authService: AuthService) {}
 }

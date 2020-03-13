@@ -1,1 +1,18 @@
-<p>energy-drinks works!</p>
+<div class="container d-flex mt-3">
+  <div class="col-6">
+    <ngrx-energy-drinks-energy-drinks-list
+      [energyDrinks]="energyDrinks$ | async"
+      (selected)="selectEnergyDrink($event)"
+      (deleted)="deleteEnergyDrink($event)"
+    >
+    </ngrx-energy-drinks-energy-drinks-list>
+  </div>
+  <div class="col-6">
+    <ngrx-energy-drinks-energy-drinks-details
+      [form]="form"
+      [energyDrink]="selectedEnergyDrink$ | async"
+      (saved)="saveEnergyDrink($event)"
+      (cancelled)="resetEnergyDrink()"
+    ></ngrx-energy-drinks-energy-drinks-details>
+  </div>
+</div>

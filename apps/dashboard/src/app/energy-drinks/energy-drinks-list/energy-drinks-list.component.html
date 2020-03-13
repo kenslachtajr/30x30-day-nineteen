@@ -1,1 +1,32 @@
-<p>energy-drinks-list works!</p>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h1>Energy Drinks</h1>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item
+        *ngFor="let drink of energyDrinks"
+        [routerLink]="[drink.id]"
+        class="mat-list-option border-bottom"
+      >
+        <h3 mat-line>{{ drink.type }}</h3>
+        <p mat-line>{{ drink.name }}</p>
+        <button
+          class="mr-2"
+          mat-mini-fab
+          (click)="selected.emit(drink); $event.stopImmediatePropagation()"
+        >
+          <mat-icon>launch</mat-icon>
+        </button>
+        <button
+          mat-mini-fab
+          (click)="deleted.emit(drink); $event.stopImmediatePropagation()"
+        >
+          <mat-icon *ngIf="!readonly">close</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

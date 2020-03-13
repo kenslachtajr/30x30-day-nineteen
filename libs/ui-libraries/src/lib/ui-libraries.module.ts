@@ -1,12 +1,30 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from '@ngrx-energy-drinks/material';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { LoginComponent } from './login/login.component';
 import { WildcardComponent } from './wildcard/wildcard.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
-  imports: [CommonModule],
-  declarations: [LoginComponent, SignupComponent, ToolbarComponent, WildcardComponent]
+  imports: [
+    CommonModule,
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
+  declarations: [
+    LoginComponent,
+    SignupComponent,
+    ToolbarComponent,
+    WildcardComponent
+  ],
+  exports: [
+    ToolbarComponent,
+    LoginComponent,
+    WildcardComponent,
+    SignupComponent
+  ]
 })
 export class UiLibrariesModule {}

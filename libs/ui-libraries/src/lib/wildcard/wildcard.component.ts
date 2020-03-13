@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'ngrx-energy-drinks-wildcard',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wildcard.component.css']
 })
 export class WildcardComponent implements OnInit {
+  constructor(private router: Router) { }
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit(): void {
+  redirectToEnergyDrinks() {
+    this.router.navigate(['./energy-drinks']);
   }
-
 }
